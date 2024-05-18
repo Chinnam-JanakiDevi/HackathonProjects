@@ -82,7 +82,7 @@ class ExpenseDetails {
         if (detail) {
             const editForm = document.createElement('form');
             editForm.setAttribute('id', 'editForm');
-            
+
             const amountInput = document.createElement('input');
             amountInput.type = 'number';
             amountInput.value = detail.amount.toString();
@@ -116,7 +116,6 @@ class ExpenseDetails {
             editForm.appendChild(categoryInput);
             editForm.appendChild(dateInput);
             editForm.appendChild(submitButton);
-
             document.body.appendChild(editForm);
         }
     }
@@ -124,73 +123,3 @@ class ExpenseDetails {
 }
 
 const data = new ExpenseDetails();
-// const addTask = document.getElementById("addTask");
-// const form = document.getElementById("form") as HTMLFormElement;
-// const submitButton = document.getElementById("submitButton") as HTMLInputElement;
-// const category = document.getElementById("category") as HTMLInputElement;
-// const todaydate = document.getElementById("date") as HTMLInputElement;
-// const amount = document.getElementById("amount") as HTMLInputElement;
-// const tablebody = document.getElementById("tablebody") as HTMLElement;
-// const deleteButton = document.getElementById("delete") as HTMLElement;
-
-// interface Items {
-//     todaydate: string;
-//     category: string;
-//     amount: number;
-// }
-
-// addTask?.addEventListener("click", () => {
-//     if (form) {
-//         form.style.display = "flex";
-//     }
-// });
-
-// submitButton?.addEventListener("click", () => {
-//     const item: Items = {
-//         todaydate: new Date(todaydate.value).toISOString().split('T')[0],
-//         category: category.value,
-//         amount: parseInt(amount.value)
-//     };
-//     data.addDetails(item);
-//     form.style.display = "none";
-//     form.reset();
-// });
-
-// class ExpenseDetails {
-//     details: Items[];
-
-//     constructor() {
-//         this.details = [];
-//     }
-
-//     addDetails(detail: Items) {
-//         this.details.push(detail);
-//         this.renderTable();
-//     }
-//     deleteDetails(index: number) {
-//         this.details.splice(index, 1);
-//         this.renderTable();
-//     }
-
-// //         deleteButton.addEventListener("click",(index: number) => {
-// //     this.deleteDetails(index)
-// // })
-
-// renderTable() {
-//     tablebody.innerHTML = ""
-//     this.details.forEach((detail, index) => {
-//         const row = document.createElement('tr');
-//         row.innerHTML = `
-//                 <td>${detail.amount}</td>
-//                 <td>${detail.category}</td>
-//                 <td>${(detail.todaydate)}</td>
-//                 <td>
-//                     <button onclick="editExpense(${index})">Edit</button></td>
-//                     <td><button onclick="deleteDetails(${index})" id="delete">Delete</button>
-//                 </td>
-//             `;
-//         tablebody.appendChild(row);
-//     })
-// }
-// }
-// const data = new ExpenseDetails();
